@@ -1,0 +1,420 @@
+/* === PAMATA IESTATĪJUMI UN KRĀSU PALETE === */
+:root {
+    --text: #090909;
+    --background: #fae0ff;
+    --primary: #9e5fab;
+    --secondary: #ca93d5;
+    --accent: #c770d9;
+   
+    --card-bg: #efc9f7;
+    --text-muted: #524656;
+    --border-soft: rgba(158, 95, 171, 0.25);
+}
+
+
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+
+/* === 2.1. CENTRĒTA GALVENE (Header) === */
+.site-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 5%;
+    background-color: var(--background);
+    border-bottom: 1px solid var(--border-soft);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    gap: 1rem;
+}
+
+
+.logo a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.9rem;
+    letter-spacing: -0.5px;
+    transition: color 0.2s ease;
+}
+
+
+.logo a:hover {
+    color: var(--primary);
+}
+
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 4rem;
+}
+
+
+.main-nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 50%;
+    background-color: var(--accent);
+    transition: all 0.25s ease;
+    transform: translateX(-50%);
+}
+
+
+.main-nav a:hover {
+    color: var(--accent);
+}
+
+
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+
+/* === 2.2. HERO SADAĻA === */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 5%;
+    min-height: auto;
+    gap: 3rem;
+}
+
+
+.hero-content {
+    flex: 1;
+}
+
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    line-height: 1.15;
+    margin-bottom: 1.2rem;
+    color: var(--text);
+    font-weight: 500;
+}
+
+
+.hero-content p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+
+.btn-primary {
+    display: inline-block;
+    padding: 0.85rem 2rem;
+    background-color: var(--primary);
+    color: #ffffff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+
+.btn-primary:hover {
+    background-color: var(--accent);
+    transform: translateY(-2px);
+}
+
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+
+.hero-image img {
+    max-width: 100%;
+    border-radius: 12px;
+    border: 2px solid var(--secondary);
+    box-shadow: 0 12px 24px rgba(158, 95, 171, 0.15);
+}
+
+
+/* === 2.3. PAR IZSTĀDI (About) === */
+.about-section {
+    padding: 2rem 5%;
+    text-align: center;
+}
+
+
+.about-section h2 {
+    font-size: 2rem;
+    color: var(--text);
+    font-weight: 500;
+}
+
+
+.about-content {
+    max-width: 780px;
+    margin: 2rem auto 0 auto;
+    background-color: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-soft);
+    box-shadow: 0 6px 18px rgba(158, 95, 171, 0.08);
+    text-align: left;
+}
+
+
+.about-content h3 {
+    color: var(--primary);
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+}
+
+
+.about-content p {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* === 2.4. GALERIJA (Grid) === */
+.gallery-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 5%;
+}
+
+
+.gallery-section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2rem;
+}
+
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.8rem;
+}
+
+
+.gallery-item {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-soft);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(158, 95, 171, 0.08);
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+
+.gallery-item:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary);
+}
+
+
+.gallery-item img {
+    width: 100%;
+    height: 330px;
+    object-fit: cover;
+    border-bottom: 1px solid var(--border-soft);
+}
+
+
+.gallery-item h3, .gallery-item p {
+    padding: 1rem 1.2rem;
+}
+
+
+.gallery-item h3 {
+    font-size: 1.1rem;
+    color: var(--text);
+    padding-bottom: 0.3rem;
+}
+
+
+.gallery-item p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    padding-top: 0;
+}
+
+
+/* === 2.5. KARUSELIS (Carousel) === */
+.carousel-section {
+    padding: 2rem 5%;
+    text-align: center;
+}
+
+
+.carousel-section h2 {
+    font-size: 2rem;
+}
+
+
+.carousel-container {
+    max-width: 720px;
+    margin: 2rem auto 0 auto;
+    background-color: var(--card-bg);
+    border: 1px solid var(--secondary);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(158, 95, 171, 0.12);
+}
+
+
+.carousel-slide {
+    display: none;
+}
+
+
+.carousel-slide.active {
+    display: block;
+}
+
+
+.carousel-slide img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border-soft);
+}
+
+
+.slide-caption h3 {
+    color: var(--primary);
+    font-size: 1.25rem;
+    margin-bottom: 0.4rem;
+}
+
+
+.slide-caption p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+
+.carousel-controls {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    margin-top: 1.8rem;
+}
+
+
+.carousel-controls button {
+    background-color: var(--background);
+    color: var(--text);
+    border: 1px solid var(--primary);
+    padding: 0.55rem 1.3rem;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+
+.carousel-controls button:hover {
+    background-color: var(--primary);
+    color: #ffffff;
+}
+
+
+/* === 2.6. KĀJENE (Footer) === */
+.site-footer {
+    text-align: center;
+    padding: 2.5rem 5%;
+    background-color: rgba(202, 147, 213, 0.2);
+    border-top: 1px solid var(--border-soft);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+
+.site-footer p {
+    margin-bottom: 0.4rem;
+}
+
+
+.site-footer a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+.site-footer a:hover {
+    color: var(--accent);
+    text-decoration: underline;
+}
+
+
+/* === MEDIA QUERIES (Mobilajām ierīcēm) === */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 3rem;
+    }
+
+
+    .hero-content h1 {
+        font-size: 2.1rem;
+    }
+   
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.2rem;
+    }
+
+
+    .carousel-slide img {
+        height: 240px;
+    }
+}
+
