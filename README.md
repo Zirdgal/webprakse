@@ -6,9 +6,9 @@ par izvēlēto tēmu.
 Izstādes tēma: [Norādiet izstādes tēmu]
 Izstādes nosaukums: [Norādiet nosaukumu]
 2. Komandas dalībnieki
-1. [Vārds, uzvārds]
-2. [Vārds, uzvārds]
-3. [Vārds, uzvārds]
+1. [Daniels Orehovs]
+2. [Matīss Zirdziņš]
+3. [Raivis Latišs]
 3. GitHub repozitorijs
 Projekta pirmkods un izstrādes vēsture ir pieejama GitHub repozitorijā:
 GitHub Repository: Ievietojiet saiti uz GitHub repozitoriju
