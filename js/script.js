@@ -4,7 +4,7 @@ const toggleAutoBtn = document.getElementById('toggleAutoBtn');
 
 let currentSlide = 1;
 let isPlaying = true;
-let slideInterval = 500; // ms
+let slideInterval = 5000; // ms
 
 
 function nextSlide() {
