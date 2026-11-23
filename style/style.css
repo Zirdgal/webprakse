@@ -29,6 +29,10 @@ body {
     overflow-x: hidden;
 }
 
+h2 {
+    font-weight: 500;
+}
+
 .site-header {
     display: flex;
     flex-direction: column;
@@ -157,7 +161,6 @@ body {
 .about-section h2 {
     font-size: 2rem;
     color: var(--text);
-    font-weight: 500;
 }
 
 .about-content {
