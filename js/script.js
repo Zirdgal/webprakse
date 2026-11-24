@@ -34,9 +34,6 @@ function prevSlide() {
     currentSlideTag.classList.add("active");
 }
 
-
-
-
 nextBtn.addEventListener("click",nextSlide); 
 
 prevBtn.addEventListener("click",prevSlide); 
@@ -51,13 +48,8 @@ toggleAutoBtn.addEventListener("click", function() {
     }
 });
 
-setInterval(() => {
+setInterval(function() {
     if (isPlaying == true) {
         nextSlide()
     }
 }, slideInterval);
-
-
-// while (isPlaying == true) {
-//     setTimeout(nextSlide, 5000);
-// }
